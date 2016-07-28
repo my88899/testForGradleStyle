@@ -1,9 +1,8 @@
-package org.kata.template;
+package org.coach.tdd.template;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import org.kata.template.Library;
 
 public class LibraryTest {
     @Test

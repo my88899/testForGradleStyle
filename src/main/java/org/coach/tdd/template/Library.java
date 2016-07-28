@@ -1,4 +1,4 @@
-package org.kata.template;
+package org.coach.tdd.template;
 
 public class Library {
     public boolean someLibraryMethod() {
