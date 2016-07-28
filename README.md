@@ -1,10 +1,11 @@
-# TDD Kata in JAVA [![Build Status](https://travis-ci.org/WowCoach/tdd-kata-java.svg?branch=master)](https://travis-ci.org/WowCoach/tdd-kata-java)
+# TDD Kata in Java [![Build Status](https://travis-ci.org/WowCoach/tdd-kata-java.svg?branch=master)](https://travis-ci.org/WowCoach/tdd-kata-java)
 
 ### TDD Practice
 * [TDD Practice 1 - 简单集合操作](docs/TDD1.md)
 * [TDD Practice 2 - 猜数字游戏](docs/TDD2.md)
 
-### [Project Board](https://github.com/WowCoach/tdd-kata-java#boards?repos=64041285)
+### Project Board
+[ZenHub](https://github.com/WowCoach/tdd-kata-java#boards?repos=64041285)
 
 ### How to Start
 #### Generate IntelliJ IDEA project
