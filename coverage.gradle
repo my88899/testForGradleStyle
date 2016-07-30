@@ -6,12 +6,12 @@ apply plugin: 'jacoco'
 
 ext {
     limits = [
-            'instruction': 96,
+            'instruction': 95,
             'branch'     : 90,
             'line'       : 90,
             'complexity' : 90,
             'method'     : 95,
-            'class'      : 98
+            'class'      : 95
     ]
 }
 
@@ -39,7 +39,7 @@ jacocoTestReport {
 check.dependsOn jacocoTestReport
 
 class CodeCoverage {
-    private static Logger LOGGER = getLogger(CodeCoverage.class);
+    private static Logger logger = getLogger(CodeCoverage.class);
     def xmlReport
     def htmlReport
     def metrics
@@ -51,26 +51,26 @@ class CodeCoverage {
     }
 
     void check(limits) {
-        LOGGER.lifecycle("Checking coverage results: ${xmlReport}")
-        LOGGER.lifecycle("Html report: ${htmlReport}")
+        logger.lifecycle("Checking coverage results: ${xmlReport}")
+        logger.lifecycle("Html report: ${htmlReport}")
         showResult checkMetrics(limits)
     }
 
     private void showResult(failures, improvements) {
         if (failures) {
-            LOGGER.quiet("--------------------- Jacoco Code Coverage Failed ---------------------")
+            logger.quiet("--------------------- Jacoco Code Coverage Failed ---------------------")
             failures.each {
-                LOGGER.quiet(it)
+                logger.quiet(it)
             }
-            LOGGER.quiet("-----------------------------------------------------------------------")
+            logger.quiet("-----------------------------------------------------------------------")
             throw new GradleException("Jacoco Code coverage failed")
         }
         if (improvements) {
-            LOGGER.quiet("-------------------- Jacoco Code Coverage Improved --------------------")
+            logger.quiet("-------------------- Jacoco Code Coverage Improved --------------------")
             improvements.each {
-                LOGGER.quiet(it)
+                logger.quiet(it)
             }
-            LOGGER.quiet("-----------------------------------------------------------------------")
+            logger.quiet("-----------------------------------------------------------------------")
         }
     }
 
